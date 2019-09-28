@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6A5C5D47233F73C100752DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D46233F73C100752DC9 /* AppDelegate.swift */; };
-		6A5C5D49233F73C100752DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D48233F73C100752DC9 /* ViewController.swift */; };
 		6A5C5D4C233F73C100752DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C5D4A233F73C100752DC9 /* Main.storyboard */; };
 		6A5C5D4E233F73C200752DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C5D4D233F73C200752DC9 /* Assets.xcassets */; };
 		6A5C5D51233F73C200752DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C5D4F233F73C200752DC9 /* LaunchScreen.storyboard */; };
 		6A5C5D5C233F73C200752DC9 /* SearchTextHighlighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D5B233F73C200752DC9 /* SearchTextHighlighterTests.swift */; };
+		6A5C5D67233F744600752DC9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D66233F744600752DC9 /* SearchTableViewController.swift */; };
+		6A5C5D69233F747000752DC9 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D68233F747000752DC9 /* SearchCell.swift */; };
+		6A5C5D6D233F751C00752DC9 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D6C233F751C00752DC9 /* SearchModel.swift */; };
+		6A5C5D6F233F752F00752DC9 /* SearchModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D6E233F752F00752DC9 /* SearchModelProtocol.swift */; };
+		6A5C5D71233F761300752DC9 /* String+MatchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C5D70233F761300752DC9 /* String+MatchQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,6 @@
 /* Begin PBXFileReference section */
 		6A5C5D43233F73C100752DC9 /* SearchTextHighlighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTextHighlighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5C5D46233F73C100752DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A5C5D48233F73C100752DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A5C5D4B233F73C100752DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A5C5D4D233F73C200752DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A5C5D50233F73C200752DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		6A5C5D57233F73C200752DC9 /* SearchTextHighlighterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTextHighlighterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5C5D5B233F73C200752DC9 /* SearchTextHighlighterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextHighlighterTests.swift; sourceTree = "<group>"; };
 		6A5C5D5D233F73C200752DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A5C5D66233F744600752DC9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		6A5C5D68233F747000752DC9 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		6A5C5D6C233F751C00752DC9 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		6A5C5D6E233F752F00752DC9 /* SearchModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModelProtocol.swift; sourceTree = "<group>"; };
+		6A5C5D70233F761300752DC9 /* String+MatchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MatchQuery.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +85,11 @@
 		6A5C5D45233F73C100752DC9 /* SearchTextHighlighter */ = {
 			isa = PBXGroup;
 			children = (
+				6A5C5D6B233F750900752DC9 /* Model */,
 				6A5C5D46233F73C100752DC9 /* AppDelegate.swift */,
-				6A5C5D48233F73C100752DC9 /* ViewController.swift */,
-				6A5C5D4A233F73C100752DC9 /* Main.storyboard */,
+				6A5C5D66233F744600752DC9 /* SearchTableViewController.swift */,
+				6A5C5D6A233F747800752DC9 /* View */,
 				6A5C5D4D233F73C200752DC9 /* Assets.xcassets */,
-				6A5C5D4F233F73C200752DC9 /* LaunchScreen.storyboard */,
 				6A5C5D52233F73C200752DC9 /* Info.plist */,
 			);
 			path = SearchTextHighlighter;
@@ -94,6 +102,26 @@
 				6A5C5D5D233F73C200752DC9 /* Info.plist */,
 			);
 			path = SearchTextHighlighterTests;
+			sourceTree = "<group>";
+		};
+		6A5C5D6A233F747800752DC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C5D68233F747000752DC9 /* SearchCell.swift */,
+				6A5C5D4A233F73C100752DC9 /* Main.storyboard */,
+				6A5C5D4F233F73C200752DC9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A5C5D6B233F750900752DC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C5D6C233F751C00752DC9 /* SearchModel.swift */,
+				6A5C5D6E233F752F00752DC9 /* SearchModelProtocol.swift */,
+				6A5C5D70233F761300752DC9 /* String+MatchQuery.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5C5D49233F73C100752DC9 /* ViewController.swift in Sources */,
 				6A5C5D47233F73C100752DC9 /* AppDelegate.swift in Sources */,
+				6A5C5D69233F747000752DC9 /* SearchCell.swift in Sources */,
+				6A5C5D67233F744600752DC9 /* SearchTableViewController.swift in Sources */,
+				6A5C5D6F233F752F00752DC9 /* SearchModelProtocol.swift in Sources */,
+				6A5C5D6D233F751C00752DC9 /* SearchModel.swift in Sources */,
+				6A5C5D71233F761300752DC9 /* String+MatchQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,14 +392,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8569ZHFCK8;
 				INFOPLIST_FILE = SearchTextHighlighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter.SearchTextHighlighter;
+				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,14 +412,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8569ZHFCK8;
 				INFOPLIST_FILE = SearchTextHighlighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter.SearchTextHighlighter;
+				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -395,7 +433,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SearchTextHighlighterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -404,6 +443,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter.SearchTextHighlighterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchTextHighlighter.app/SearchTextHighlighter";
@@ -415,7 +455,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SearchTextHighlighterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,6 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = swift.ivuninmk.SearchTextHighlighter.SearchTextHighlighterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchTextHighlighter.app/SearchTextHighlighter";
@@ -440,7 +482,7 @@
 				6A5C5D5F233F73C200752DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6A5C5D60233F73C200752DC9 /* Build configuration list for PBXNativeTarget "SearchTextHighlighter" */ = {
 			isa = XCConfigurationList;
@@ -449,7 +491,7 @@
 				6A5C5D62233F73C200752DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6A5C5D63233F73C200752DC9 /* Build configuration list for PBXNativeTarget "SearchTextHighlighterTests" */ = {
 			isa = XCConfigurationList;
@@ -458,7 +500,7 @@
 				6A5C5D65233F73C200752DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
